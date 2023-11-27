@@ -52,8 +52,8 @@ namespace TrocoApp
             //trocoTotal.AddRange(trocoDecimal);
 
 
-            MostrarTroco(trocoInteiro, "nota");
-            MostrarTroco(trocoDecimal, "moeda");
+            ExibirTroco(trocoInteiro, "nota");
+            ExibirTroco(trocoDecimal, "moeda");
 
 
         }
@@ -156,57 +156,8 @@ namespace TrocoApp
             return troco;
         }
 
-//        static List<TrocoMoeda> ConstruirTroco(List<double> moedas, int[] dp)
-//{
-//    List<TrocoMoeda> troco = new List<TrocoMoeda>();
-//    int index = dp.Length - 1;
 
-//    while (index > 0)
-//    {
-//        //Console.WriteLine($"DEBUG: Entrou no loop principal. Index = {index}");
-
-//        foreach (var moeda in moedas)
-//        {
-//            int moedaInt = (int)moeda;
-//            int moedaCentavos = (int)(moeda * 100);
-
-//            //Console.WriteLine($"DEBUG: MoedaInt = {moedaInt}, MoedaCentavos = {moedaCentavos}");
-
-//            if (moedaInt > 0 && index >= moedaInt && dp[index] == 1 + dp[index - moedaInt])
-//            {
-//                int quantidade = 0;
-//                while (moedaInt > 0 && index >= moedaInt && dp[index] == 1 + dp[index - moedaInt])
-//                {
-//                    quantidade++;
-//                    index -= moedaInt;
-//                }
-
-//                //troco.Add(new TrocoMoeda(moedaInt, quantidade));
-//                // Console.WriteLine($"DEBUG: Adicionou troco - {quantidade} moeda(s) de {moedaInt}");
-//                break;
-//            }
-//            else if (moedaCentavos > 0 && index >= moedaCentavos && dp[index] == 1 + dp[index - moedaCentavos])
-//            {
-//                int quantidade = 0;
-//                while (moedaCentavos > 0 && index >= moedaCentavos && dp[index] == 1 + dp[index - moedaCentavos])
-//                {
-//                    quantidade++;
-//                    index -= moedaCentavos;
-//                }
-
-//                troco.Add(new TrocoMoeda(moeda, quantidade));
-//                //Console.WriteLine($"DEBUG: Adicionou troco - {quantidade} moeda(s) de {moeda}");
-//                break;
-//            }
-//        }
-//    }
-
-//    //Console.WriteLine("DEBUG: Saindo da função ConstruirTroco");
-//    return troco;
-//}
-
-
-static void MostrarTroco(List<TrocoMoeda> troco, string tipo)
+static void ExibirTroco(List<TrocoMoeda> troco, string tipo)
 {
     Console.WriteLine($"O troco em {tipo}s é: ");
     foreach (var trocoMoeda in troco)
