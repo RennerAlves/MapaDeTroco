@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Drawing;
-using System.Globalization;
-using System.Runtime.Intrinsics.Arm;
+﻿using System.Globalization;
 using MapaDeTroco;
 
 namespace TrocoApp
@@ -16,8 +11,6 @@ namespace TrocoApp
             List<double> moedasDecimais = new List<double> { 0.50, 0.25, 0.10, 0.05 };
 
 
-            //Sem a moeda de 1 centavo, valores como 1135.48 podem não ser resolvíveis.
-
 
             decimal input = 0;
 
@@ -27,11 +20,11 @@ namespace TrocoApp
 
                 try
                 {
-                    string inputStr = Console.ReadLine();
+                    string inputStr = Console.ReadLine()!;
                     input = decimal.Parse(inputStr, NumberStyles.Float, CultureInfo.InvariantCulture);
 
                     if (input > 0)
-                        break; // Sai do loop se um valor válido for inserido
+                        break; 
                     else
                         Console.WriteLine("Valor inválido. Certifique-se de inserir um número válido.");
                 }
@@ -46,12 +39,6 @@ namespace TrocoApp
 
             List<TrocoMoeda> trocoInteiro = CalcularTrocoDinamicoNotas(moedasInteiras, parteInteira);
             List<TrocoMoeda> trocoDecimal = CalcularTrocoDinamicoMoedas(moedasDecimais, parteDecimal);
-
-            //List<TrocoMoeda> trocoTotal = new List<TrocoMoeda>();
-            //trocoTotal.AddRange(trocoInteiro);
-            //trocoTotal.AddRange(trocoDecimal);
-
-
             ExibirTroco(trocoInteiro, "nota");
             ExibirTroco(trocoDecimal, "moeda");
 
