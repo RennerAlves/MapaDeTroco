@@ -155,7 +155,7 @@ static void ExibirTroco(List<TrocoMoeda> troco, string tipo)
             Console.WriteLine($"{trocoMoeda.Quantidade} {tipo}s de {valorMoeda}");
         }
         else
-        {
+        {   
             Console.WriteLine($"{trocoMoeda.Quantidade} {tipo}s de {trocoMoeda.Moeda}");
         }
     }
