@@ -91,13 +91,12 @@ namespace TrocoApp
                     if (i >= moedaCentavos)
                     {
                         dp[i] = Math.Min(dp[i], 1 + dp[i - moedaCentavos]);
-                        Console.WriteLine(i);
+                        
                     }
                 }
             }
 
             List<TrocoMoeda> troco = ConstruirTroco(moedas, dp);
-            Console.WriteLine("Retornando Troco");
             return troco;
         }
 
