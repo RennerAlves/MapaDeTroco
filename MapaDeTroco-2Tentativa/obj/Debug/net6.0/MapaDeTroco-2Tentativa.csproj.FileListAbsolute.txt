@@ -1,0 +1,14 @@
+C:\Users\renne\source\repos\MapaDeTroco-2Tentativa\MapaDeTroco-2Tentativa\bin\Debug\net6.0\MapaDeTroco-2Tentativa.exe
+C:\Users\renne\source\repos\MapaDeTroco-2Tentativa\MapaDeTroco-2Tentativa\bin\Debug\net6.0\MapaDeTroco-2Tentativa.deps.json
+C:\Users\renne\source\repos\MapaDeTroco-2Tentativa\MapaDeTroco-2Tentativa\bin\Debug\net6.0\MapaDeTroco-2Tentativa.runtimeconfig.json
+C:\Users\renne\source\repos\MapaDeTroco-2Tentativa\MapaDeTroco-2Tentativa\bin\Debug\net6.0\MapaDeTroco-2Tentativa.dll
+C:\Users\renne\source\repos\MapaDeTroco-2Tentativa\MapaDeTroco-2Tentativa\bin\Debug\net6.0\MapaDeTroco-2Tentativa.pdb
+C:\Users\renne\source\repos\MapaDeTroco-2Tentativa\MapaDeTroco-2Tentativa\obj\Debug\net6.0\MapaDeTroco-2Tentativa.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\renne\source\repos\MapaDeTroco-2Tentativa\MapaDeTroco-2Tentativa\obj\Debug\net6.0\MapaDeTroco-2Tentativa.AssemblyInfoInputs.cache
+C:\Users\renne\source\repos\MapaDeTroco-2Tentativa\MapaDeTroco-2Tentativa\obj\Debug\net6.0\MapaDeTroco-2Tentativa.AssemblyInfo.cs
+C:\Users\renne\source\repos\MapaDeTroco-2Tentativa\MapaDeTroco-2Tentativa\obj\Debug\net6.0\MapaDeTroco-2Tentativa.csproj.CoreCompileInputs.cache
+C:\Users\renne\source\repos\MapaDeTroco-2Tentativa\MapaDeTroco-2Tentativa\obj\Debug\net6.0\MapaDeTroco-2Tentativa.dll
+C:\Users\renne\source\repos\MapaDeTroco-2Tentativa\MapaDeTroco-2Tentativa\obj\Debug\net6.0\refint\MapaDeTroco-2Tentativa.dll
+C:\Users\renne\source\repos\MapaDeTroco-2Tentativa\MapaDeTroco-2Tentativa\obj\Debug\net6.0\MapaDeTroco-2Tentativa.pdb
+C:\Users\renne\source\repos\MapaDeTroco-2Tentativa\MapaDeTroco-2Tentativa\obj\Debug\net6.0\MapaDeTroco-2Tentativa.genruntimeconfig.cache
+C:\Users\renne\source\repos\MapaDeTroco-2Tentativa\MapaDeTroco-2Tentativa\obj\Debug\net6.0\ref\MapaDeTroco-2Tentativa.dll
