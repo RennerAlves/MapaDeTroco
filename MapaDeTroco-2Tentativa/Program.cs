@@ -107,7 +107,7 @@ namespace TrocoApp
 
             while (index > 0)
             {
-                Console.WriteLine($"DEBUG: Entrou no loop principal. Index = {index}");
+                //Console.WriteLine($"DEBUG: Entrou no loop principal. Index = {index}");
 
                 foreach (var moeda in moedas)
                 {
@@ -145,7 +145,7 @@ namespace TrocoApp
                 }
             }
 
-            Console.WriteLine("DEBUG: Saindo da função ConstruirTroco");
+            //Console.WriteLine("DEBUG: Saindo da função ConstruirTroco");
             return troco;
         }
 
