@@ -11,6 +11,8 @@ namespace TrocoApp
         {
             List<double> moedasInteiras = new List<double> { 100, 50, 20, 10, 5, 2, 1 };
             List<double> moedasDecimais = new List<double> { 0.50, 0.25, 0.10, 0.05 };
+
+            //Sem a moeda de 1 centavo, valores como 1135.48 podem não ser resolvíveis.
             
 
             decimal input = 0;
@@ -21,7 +23,8 @@ namespace TrocoApp
 
                 try
                 {
-                    input = Convert.ToDecimal(Console.ReadLine(), CultureInfo.InvariantCulture);
+                    string inputStr = Console.ReadLine();
+                    input = decimal.Parse(inputStr, NumberStyles.Float, CultureInfo.InvariantCulture);
 
                     if (input > 0)
                         break; // Sai do loop se um valor válido for inserido
@@ -80,17 +83,21 @@ namespace TrocoApp
             for (int i = 1; i <= valorCentavos; i++)
             {
                 dp[i] = int.MaxValue;
+
                 foreach (var moeda in moedas)
                 {
                     int moedaCentavos = (int)(moeda * 100);
+
                     if (i >= moedaCentavos)
                     {
                         dp[i] = Math.Min(dp[i], 1 + dp[i - moedaCentavos]);
+                        Console.WriteLine(i);
                     }
                 }
             }
 
             List<TrocoMoeda> troco = ConstruirTroco(moedas, dp);
+            Console.WriteLine("Retornando Troco");
             return troco;
         }
 
@@ -101,10 +108,14 @@ namespace TrocoApp
 
             while (index > 0)
             {
+                Console.WriteLine($"DEBUG: Entrou no loop principal. Index = {index}");
+
                 foreach (var moeda in moedas)
                 {
                     int moedaInt = (int)moeda;
                     int moedaCentavos = (int)(moeda * 100);
+
+                    //Console.WriteLine($"DEBUG: MoedaInt = {moedaInt}, MoedaCentavos = {moedaCentavos}");
 
                     if (moedaInt > 0 && index >= moedaInt && dp[index] == 1 + dp[index - moedaInt])
                     {
@@ -115,8 +126,8 @@ namespace TrocoApp
                             index -= moedaInt;
                         }
 
-                        
                         troco.Add(new TrocoMoeda(moedaInt, quantidade));
+                        // Console.WriteLine($"DEBUG: Adicionou troco - {quantidade} moeda(s) de {moedaInt}");
                         break;
                     }
                     else if (moedaCentavos > 0 && index >= moedaCentavos && dp[index] == 1 + dp[index - moedaCentavos])
@@ -129,13 +140,16 @@ namespace TrocoApp
                         }
 
                         troco.Add(new TrocoMoeda(moeda, quantidade));
+                        //Console.WriteLine($"DEBUG: Adicionou troco - {quantidade} moeda(s) de {moeda}");
                         break;
                     }
                 }
             }
 
+            Console.WriteLine("DEBUG: Saindo da função ConstruirTroco");
             return troco;
         }
+
 
         static void MostrarTroco(List<TrocoMoeda> troco, string tipo)
         {
